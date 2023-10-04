@@ -19,3 +19,9 @@ Press "Connect"
 **Boom** you're connected.
 
 _Congratulations~~_
+
+# Database Info
+```
+serverName = tcp:cis4375.database.windows.net
+databaseName = CIS4375TEAM23DB
+```
