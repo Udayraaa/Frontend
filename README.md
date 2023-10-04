@@ -8,12 +8,12 @@ Once in SSMS you should be on a "Connect to Server" screen
 
 Ensure the following:
 
-  Server Type: Database Engine
-  Server Name: tcp:cis4375.database.windows.net
-  Authentication: Azure Active Directory - Password
-  User name: [YOUR UH EMAIL]
-  Password: [YOUR PASSWORD]
-
+```Server Type: Database Engine
+Server Name: tcp:cis4375.database.windows.net
+Authentication: Azure Active Directory - Password
+User name: [YOUR UH EMAIL]
+Password: [YOUR PASSWORD]
+```
 Press "Connect"
 
 **Boom** you're connected.
