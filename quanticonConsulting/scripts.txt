@@ -1,5 +1,9 @@
-* activate env
+// activate env
 source venv/bin/activate
 
-Run Server - Front-end and Back-end
-python3 manage.py runservr
+// Install Requirements
+pip install -r requirements.txt
+
+// Run Server - Front-end and Back-end
+python3 manage.py runserver
+

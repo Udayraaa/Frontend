@@ -5,5 +5,10 @@ from . import views
 app_name = "store"
 
 urlpatterns = [
-path("", views.home_page, name="home"),
+path("", views.home_page, name="homePage"),
+path("about/", views.about, name="aboutPage"),
+path("services/", views.services, name="servicesPage"),
+path("resources/", views.resources, name="resourcesPage"),
+path("contact/", views.contact, name="contactPage"),
+path("blogSummary/", views.blog_summary, name="blogSummaryPage"),
 ]

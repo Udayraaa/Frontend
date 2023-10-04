@@ -1,3 +1,15 @@
+{% load static %}
+
+<style>
+    .footer {
+        position: fixed; /* Position fixed to keep it at the bottom */
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color:  #0A0A95; 
+        color:white;
+</style>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,34 +21,34 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="/">Navbar</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="/about">About</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Services
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Blog</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="/services">Services</a></li>
+                  <li><a class="dropdown-item" href="/resources">Resources</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" >Blog</a>
+                <a class="nav-link active" aria-current="page" href="/blogSummary" >Blog</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link">Contact us</a>
+                <a class="nav-link active" aria-current="page" href="/contact">Contact us</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -46,5 +58,40 @@
           </div>
         </div>
       </nav>
+{% comment %} BODY SECTION {% endcomment %}
+  <main class="pt-2" style="">
+    <div id="content">{% block content %} {% endblock %}</div>
+    <br/>
+<br/>
+  </main>
+  {% comment %} FOORTER SECTION {% endcomment %}
+  <footer class="container-fluid py-0">
+    <div class="footer row pt-4">
+      <section id="comp-jqdodavz" class="comp-jqdodavz CohWsy wixui-column-strip">
+        <div data-testid="columns" class="V5AUxf">
+          <div id="comp-jqdodaxl" class="comp-jqdodaxl YzqVVZ wixui-column-strip__column">
+            <div data-mesh-id="comp-jqdodaxlinlineContent" data-testid="inline-content" class="">
+              <div data-mesh-id="comp-jqdodaxlinlineContent-grid Container" data-testid="mesh-container-content">
+                <div id="comp-jq3uf77n" class="KcpHeO tz5f0K comp-jq3uf77n wixui-rich-text" data-testid="richTextElement">
+                  <p class="font_7 wixui-rich-text__text" style="line-height:normal; text-align:center; font-size:15px;">
+                    <span style="letter-spacing:0.07em;" class="wixui-rich-text__text">© 2023 Quanticon Consulting</span></p>
+                  </div>
+                  <div id="comp-lgio20m3" class="comp-lgio20m3 WzbAF8">
+                    <ul class="mpGTIt" style='text-align: center;' aria-label="Social Bar">
+                        <a data-testid="linkElement" href="https://www.instagram.com/" target="_blank" rel="noreferrer noopener" class="oRtuWN">
+                          <wow-image id="img_0_comp-lgio20m3" class="HlRz5e YaS0jR" data-image-info="{&quot;containerId&quot;:&quot;dataItem-lgio20nx-comp-lgio20m3&quot;,&quot;displayMode&quot;:&quot;fill&quot;,&quot;imageData&quot;:{&quot;width&quot;:200,&quot;height&quot;:200,&quot;uri&quot;:&quot;e1aa082f7c0747168d9cf43e77046142.png&quot;,&quot;name&quot;:&quot;&quot;,&quot;displayMode&quot;:&quot;fill&quot;}}" data-bg-effect-name="" data-has-ssr-src="" style="--wix-img-max-width:max(200px, 100%)" data-src="https://static.wixstatic.com/media/e1aa082f7c0747168d9cf43e77046142.png/v1/fill/w_78,h_78,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/e1aa082f7c0747168d9cf43e77046142.png">
+                            <img alt="Instagram" style="width: 39px; height: 39px; object-fit: cover;" fetchpriority="high" src="https://static.wixstatic.com/media/e1aa082f7c0747168d9cf43e77046142.png/v1/fill/w_78,h_78,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/e1aa082f7c0747168d9cf43e77046142.png"></wow-image></a>
+                            <a data-testid="linkElement" href="https://www.facebook.com/" target="_blank" rel="noreferrer noopener" class="oRtuWN"><wow-image id="img_1_comp-lgio20m3" class="HlRz5e YaS0jR" data-image-info="{&quot;containerId&quot;:&quot;dataItem-lgio20o4-comp-lgio20m3&quot;,&quot;displayMode&quot;:&quot;fill&quot;,&quot;imageData&quot;:{&quot;width&quot;:200,&quot;height&quot;:200,&quot;uri&quot;:&quot;4057345bcf57474b96976284050c00df.png&quot;,&quot;name&quot;:&quot;&quot;,&quot;displayMode&quot;:&quot;fill&quot;}}" data-bg-effect-name="" data-has-ssr-src="" style="--wix-img-max-width:max(200px, 100%)" data-src="https://static.wixstatic.com/media/4057345bcf57474b96976284050c00df.png/v1/fill/w_78,h_78,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/4057345bcf57474b96976284050c00df.png">
+                              <img alt="Facebook" style="width: 39px; height: 39px; object-fit: cover;" fetchpriority="high" src="https://static.wixstatic.com/media/4057345bcf57474b96976284050c00df.png/v1/fill/w_78,h_78,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/4057345bcf57474b96976284050c00df.png"></wow-image></a>
+                              <a data-testid="linkElement" href="https://www.youtube.com/" target="_blank" rel="noreferrer noopener" class="oRtuWN"><wow-image id="img_2_comp-lgio20m3" class="HlRz5e YaS0jR" data-image-info="{&quot;containerId&quot;:&quot;dataItem-lgio20o46-comp-lgio20m3&quot;,&quot;displayMode&quot;:&quot;fill&quot;,&quot;imageData&quot;:{&quot;width&quot;:200,&quot;height&quot;:200,&quot;uri&quot;:&quot;45bce1d726f64f1999c49feae57f6298.png&quot;,&quot;name&quot;:&quot;&quot;,&quot;displayMode&quot;:&quot;fill&quot;}}" data-bg-effect-name="" data-has-ssr-src="" style="--wix-img-max-width:max(200px, 100%)" data-src="https://static.wixstatic.com/media/45bce1d726f64f1999c49feae57f6298.png/v1/fill/w_78,h_78,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/45bce1d726f64f1999c49feae57f6298.png">
+                                <img alt="YouTube" style="width: 39px; height: 39px; object-fit: cover;" fetchpriority="high" src="https://static.wixstatic.com/media/45bce1d726f64f1999c49feae57f6298.png/v1/fill/w_78,h_78,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/45bce1d726f64f1999c49feae57f6298.png"></wow-image></a></ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+    </div>
+  </footer>
 </body>
 </html>
