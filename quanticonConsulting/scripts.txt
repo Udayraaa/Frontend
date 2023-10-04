@@ -1,0 +1,5 @@
+* activate env
+source venv/bin/activate
+
+Run Server - Front-end and Back-end
+python3 manage.py runservr
