@@ -10,7 +10,7 @@ Ensure the following:
 
 ```Server Type: Database Engine
 Server Name: tcp:cis4375.database.windows.net
-Authentication: Azure Active Directory - Password
+Authentication: Azure Active Directory - Universal with MFA
 User name: [YOUR UH EMAIL]
 Password: [YOUR PASSWORD]
 ```
