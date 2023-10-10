@@ -12,8 +12,9 @@ Ensure the following:
 Server Name: tcp:cis4375.database.windows.net
 Authentication: Azure Active Directory - Universal with MFA
 User name: [YOUR UH EMAIL]
-Password: [YOUR PASSWORD]
 ```
+Microsoft should then ask you to sign in 
+
 Press "Connect"
 
 **Boom** you're connected.
