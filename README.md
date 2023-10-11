@@ -26,3 +26,25 @@ _Congratulations~~_
 serverName = tcp:cis4375.database.windows.net
 databaseName = CIS4375TEAM23DB
 ```
+
+# Run the Website
+
+Open Visual Studio Code
+Link GitHub (must have git installed)
+Clone repository 
+```
+git clone https://github.com/Udayraaa/Quantico-Consulting-Site.git
+```
+
+Change Directory to the correct location (you can right click on the cloned repo)
+```
+cd [LOCATION HERE]
+``` 
+Install requirements
+```
+pip install -r requirements.txt
+```
+Run Server
+```
+python3 manage.py runserver
+```
