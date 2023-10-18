@@ -4,6 +4,10 @@ source venv/bin/activate
 // Install Requirements
 pip install -r requirements.txt
 
+// make migrations and migrate
+python3 manage.py makemigrations
+python3 manage.py migrate 
+
 // Run Server - Front-end and Back-end
 python3 manage.py runserver
 
