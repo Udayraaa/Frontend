@@ -11,3 +11,10 @@ python3 manage.py migrate
 // Run Server - Front-end and Back-end
 python3 manage.py runserver
 
+TESTING - Nevarren
+==========================================
+python3 -m pip install Pillow   
+pip3 install --no-binary :all: pyodbc
+pip install mssql-django    
+brew install msodbcsql17   
+brew install mssql-tools  
