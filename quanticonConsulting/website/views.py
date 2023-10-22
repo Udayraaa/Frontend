@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from django.db import connection
+
 def home_page(request):
     return render(request, "website/index.html")
 
@@ -17,3 +19,17 @@ def contact(request):
 
 def blog_summary(request):
     return render(request, "blog/blogSummary.html")
+
+def NevTest(request):
+    return render(request, "website/NevTest.html")
+
+def execute_sql(request):
+    results = []
+
+    if request.method == "POST":
+        sql_query = request.POST.get('sql_query')
+        with connection.cursor() as cursor:
+            cursor.execute(sql_query)
+            results = cursor.fetchall()
+
+    return render(request, 'website/NevTest.html', {'results': results})

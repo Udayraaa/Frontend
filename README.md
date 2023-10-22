@@ -48,3 +48,11 @@ Run Server
 ```
 python3 manage.py runserver
 ```
+
+SiteUser
+_Qwerty123
+
+databasename: CIS4375TEAM23DB
+servername: cis4375.database.windows.net
+user: SiteUser
+pass:_Qwerty123
