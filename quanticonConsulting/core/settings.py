@@ -67,6 +67,8 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'mssql',
         'NAME': 'CIS4375TEAM23DB',
         'USER': 'SiteUser@cis4375',
@@ -79,10 +81,6 @@ DATABASES = {
         },
     }
 }
-
-
-
-
 
 
 # Password validation
