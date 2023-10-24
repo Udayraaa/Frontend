@@ -35,16 +35,47 @@ Clone repository
 ```
 git clone https://github.com/Udayraaa/Quantico-Consulting-Site.git
 ```
-
+Ensure you have python installed (3.12.0) works for sure
 Change Directory to the correct location (you can right click on the cloned repo)
 ```
-cd [LOCATION HERE]
+cd quanticonConsulting
 ``` 
 Install requirements
 ```
 pip install -r requirements.txt
+pip install mssql-django 
+pip install Pillow 
+```
+INSTALL ODBC DRIVER 17 (IT HAS TO BE 17, 18 DOESNT WORK)
+```
+https://go.microsoft.com/fwlink/?linkid=2249004
 ```
 Run Server
 ```
 python3 manage.py runserver
 ```
+test
+
+SiteUser
+_Qwerty123
+
+databasename: CIS4375TEAM23DB
+servername: cis4375.database.windows.net
+user: SiteUser
+pass:_Qwerty123
+
+
+Ensure you have python installed (3.12.0) works for sure
+
+cd quanticonConsulting
+
+pip install -r requirements.txt
+pip install mssql-django 
+pip install Pillow 
+
+INSTALL ODBC DRIVER 17 (IT HAS TO BE 17, 18 DOESNT WORK)
+https://go.microsoft.com/fwlink/?linkid=2249004
+
+
+
+
