@@ -12,5 +12,4 @@ path("resources/", views.resources, name="resourcesPage"),
 path("contact/", views.contact, name="contactPage"),
 path("blogSummary/", views.blog_summary, name="blogSummaryPage"),
 path('NevTest/', views.execute_sql, name='execute_sql'),
-
 ]
