@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block title %} Contact Us {% endblock %}
+{% block content %}
+{% load static %}
+<style>
+    .body {
+        font-family: "cinzel", serif;
+        font-size: 18px;
+        background-color: #E3E3E3;
+    }
+
+    .head_text {
+        color: white;
+    }
+
+    .card {
+        color: black;
+    }
+
+    /* Additional CSS for styling the header */
+    .header {
+        background-color: #ffff;
+        padding: 20px;
+        color: black;
+        text-align: center;
+    }
+
+    .header h3 {
+        font-size: 36px;
+    }
+
+    .header p {
+        font-size: 18px;
+    }
+</style>
+
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h3 class="site-heading my-4 mt-3">Contact Quanticon Consulting</h3>
+                    <p class="text-dark">Have questions, requests, or want to schedule an appointment? Feel free to contact us.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="col-md-8 mt-3 left">
+        <div class="card mb-4">
+            <div style="color: black; background-color: #E3E3E3;" class="card-body">
+                <h2 class="card-title">Contact Details</h2>
+                <p class="card-text text-muted h6">Email: contact@example.com</p>
+                <p class="card-text text-muted h6">Phone: +1 (123) 456-7890</p>
+                <p class="card-text text-muted h6">Address: 123 Main Street, City, Country</p>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div style="color: black; background-color: #E3E3E3;" class="card-body">
+                <h2 class="card-title">Office Hours</h2>
+                <p class="card-text text-muted h6">Monday - Friday: 9:00 AM - 5:00 PM</p>
+                <p class="card-text text-muted h6">Saturday: 10:00 AM - 2:00 PM</p>
+                <p class="card-text text-muted h6">Sunday: Closed</p>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div style="color: black; background-color: #E3E3E3;" class="card-body">
+                <h2 class="card-title">Privacy and Data Handling</h2>
+                <p class="card-text text-muted h6">
+                    Your privacy is important to us. Any information you provide through this form will be handled in accordance with our privacy policy. We do not share your information with third parties.
+                </p>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div style="color: black; background-color: #E3E3E3;" class="card-body">
+                <h2 class="card-title">Contact Form</h2>
+                <form method="post">
+                    {% csrf_token %}
+                        {{form.as_p}}
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br/>
+<br/>
+{% endblock %}

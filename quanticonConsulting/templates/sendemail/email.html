@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+    
+{% load static %}
+{% block title %} CONTACT US {% endblock %}
+
+{% block content %}
+
+<style>
+  .containerbtn { 
+    height: 200px;
+    position: relative;
+    border: 3px solid green; 
+  }
+  
+  .vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  {% comment %} .column {
+    float:right;
+    padding: 10px;
+
+  } {% endcomment %}
+  hr.dashed {
+    border-top: 3px dashed #bbb;
+  }
+  
+  .left {
+    width: 40%;
+  }
+  
+  .right {
+    width: 60%;
+    background-color: #;
+  
+ 
+  margin-bottom: none;
+  }
+  
+  textarea {
+    width:38%;
+    text-align: center;
+    border-color: rgb(143, 1, 1);
+    
+}
+input {
+  width:38%;
+  text-align: center;
+  border-color: rgb(143, 1, 1);
+}
+button {
+  width:auto%;
+}
+form {
+  text-align: center;
+}
+{% comment %} .p2 {
+  position: relative;
+    top: 65%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #FFFFF;
+    color: rgb(143, 1,1);
+    font-family: 'Cinzel', serif;
+    padding: 2px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center; 
+}{% endcomment %}
+.innerbanner {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.image1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  opacity: .9;
+  
+}
+
+.image2 {
+  position: absolute;
+  top: 35%;
+  left: 33%;
+  justify-content: center;
+  position-items: center;
+  color: rgb(143, 1, 1);
+  font-size: 25px;
+}
+</style>
+
+<div class="dBlock w-100">
+  <img class="dBlock w-100" style="overflow: hidden; opacity: .6" src="/media/images/contact/wykedbanner.png" style=" font:serif; color:#01447b;">
+<h1 align="center" style="color: #b11818; font-size:32px; font-family: Cinzel, serif;">
+  CONTACT US</h1>
+</div>
+</div>
+
+{% comment %} <div style="display: flex; align-items: center; justify-content: center;" class="container-fluid" >
+  <img src="/media/images/contact/wykedbanner.png" style="opacity: 0.6;" class="d-block w-100" alt="">
+<h1 class="p2" align="center" style="color: rgb (143, 1, 1); font-size:32px;">
+  CONTACT US</h1>
+</div>
+</div>
+<br /> {% endcomment %}
+
+
+<div id="comp-jqanshrf" class="BaOVQ8 tz5f0K comp-jqanshrf wixui-rich-text" data-testid="richTextElement">
+  <h2 class="font_5 wixui-rich-text__text" style="text-align:center; font-family: Arial,Helvetica,sans-serif; font-size:17px; color: white;">CUSTOMER SERVICE</h2></div>
+  <br />
+
+  <br />
+
+  <p class="font_7 wixui-rich-text__text" style="text-align:center; line-height:normal; font-size:15px;">
+    <span style="letter-spacing:normal; color: white;" class="wixui-rich-text__text">Feel free to contact us by email&nbsp;</span></p>
+    <br />
+
+    <p class="font_7 wixui-rich-text__text" style="text-align:center; line-height:normal; font-size:15px;">
+      <span style="letter-spacing:normal; text-decoration:none;" class="wixui-rich-text__text">
+        <a data-auto-recognition="true" style="text-decoration:none; color: white;" href="mailto:wykeddesiresnailbrand@gmail.com" class="wixui-rich-text__text">wykeddesiresnailbrand@gmail.com</a></span></p>
+
+        <form method="post">
+          {% csrf_token %}
+          <p>
+  <label style="color: white; font-family: 'Nunito Sans', sans-serif; text-align: center; width: 90%;" for="id_first_name">First name:</label>
+  <br/>
+  <input type="text" name="first_name" maxlength="50" required="" id="id_first_name">
+          </p>
+<p>
+  <label style="color: white; font-family: 'Nunito Sans', sans-serif; text-align: center;" for="id_last_name">Last name:</label>
+  <br/>
+  <input type="text" name="last_name" maxlength="50" required="" id="id_last_name">
+</p>
+<p>
+  <label style="color: white; font-family: 'Nunito Sans', sans-serif; text-align: center;" for="id_email_from">Enter Email:</label>
+  <br/>
+  <input type="email" name="email_from" maxlength="320" required="" id="id_email_from">
+</p>
+<p>
+  <label style="color: white; font-family: 'Nunito Sans', sans-serif; text-align: center;" for="id_subject">Subject:</label>
+  <br/>
+  <input type="text" name="subject" required="" id="id_subject"> 
+</p>
+<p>
+  <label style="color: white; font-family: 'Nunito Sans', sans-serif; text-align: center;" for="id_phone_number">Phone number:</label>
+  <br/>
+  <input type="text" name="phone_number" maxlength="17" required="" id="id_phone_number">
+</p>
+<p>
+  <label style="color: white; font-family: 'Nunito Sans', sans-serif; text-align: center;" for="id_message">Message:</label>
+  <br/>
+  <textarea name="message" cols="40" rows="10" required="" id="id_message"></textarea>
+</p>
+          <div style="text-align: center;" class="form-actions">
+            <button type="submit">Send</button>
+          </div>
+      </form>
+      </div>
+
+<script>
+{% if success_message %}
+    // Display an alert with the success message
+    alert("{{ success_message }}");
+{% endif %}
+</script>
+    
+
+{% endblock %}

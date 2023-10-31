@@ -1,0 +1,26 @@
+{% block content %}
+<header>
+<div style="background-color: rgb(143, 1, 1); padding: 5px;" class="container">
+    <div class="row">
+        <div class="col-md-3"> 
+        <a class="navbar-brand" href="/">
+          <img src="https://jlbalde2.pythonanywhere.com/static/logo.png" height="120" width="120">
+        </a>
+      </div>
+    <h2 style="color: white; text-align: center;">THIS IS A CONTACT EMAIL</h2>
+</header>
+<div style="background-color: black; color: white; padding-top: 50px;;" class="container">
+    <p style="color: white;">First Name: {{ first_name }}</p>
+    <p style="color: white;">Last Name: {{ last_name }}</p>
+    <p style="color: white;">Email: {{ email_from }}</p>
+    <p style="color: white;">Phone Number: {{ phone_number }}</p>
+    
+    {% if image %}
+        <!-- Display image here -->
+        <img src="{{ image.url }}" alt="Contact Image">
+    {% endif %}
+    
+    <h3 style="color: white;">Message:</h3>
+    <pre>{{ message }}</pre>
+
+{% endblock %}

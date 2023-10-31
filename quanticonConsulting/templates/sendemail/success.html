@@ -1,0 +1,18 @@
+{% extends "../base.html" %} 
+{% load static %} 
+{% block title %}Message Sent{% endblock %} {% block content %}
+
+<div class="container">
+  <div class="col-12">
+    <h1 class="h2" style="color: white; font-family: 'Nunito Sans', sans-serif; text-align: center;">Your email was sent successfully. <strong>Thank you!</strong></h1>
+  </div>
+  <div class="col-12" style="color: white; font-family: 'Nunito Sans', sans-serif;">
+    <p>We will get back to you as soon as possible.</p>
+  </div>
+  <hr />
+  <div class="col-12" style="color: white; font-family: 'Nunito Sans', sans-serif;">
+    <p>Back to <a style="text-decoration: none;" href="{% url 'store:store_home'%}"><strong>Home Page<strong></a></p>
+  </div>
+</div>
+
+{% endblock %}
