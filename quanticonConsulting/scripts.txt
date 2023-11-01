@@ -10,10 +10,13 @@ pip install Pillow
 // make migrations and migrate
 python3 manage.py makemigrations
 python3 manage.py migrate 
+OR
+python manage.py migrate
 
 // Run Server - Front-end and Back-end
 python3 manage.py runserver
-
+OR
+python manage.py runserver
 
 ==========================================
 IF ON MAC 
