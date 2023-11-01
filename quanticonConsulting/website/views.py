@@ -41,36 +41,41 @@ def execute_sql(request):
 
     return render(request, 'website/NevTest.html', {'results': results})
 
-# Contact Form Function
+# Update contact function
 def contact(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
-            subject = "THIS IS A CONTACT EMAIL"
-            email_from = form.cleaned_data["email_from"]
+            subject = "Contact Form Inquiry"
 
-            # Render the HTML content using the new template and form data
-            html_message = render_to_string(
-                "website/contact.html",
-                {
-                    "first_name": form.cleaned_data["first_name"],
-                    "last_name": form.cleaned_data["last_name"],
-                    "email_from": form.cleaned_data["email_from"],
-                    "phone_number": form.cleaned_data["phone_number"],
-                    "message": form.cleaned_data["message"],
-                    # Add other fields as needed
-                    # ...
-                },
-            )
+            body = {
+                'first_name': form.cleaned_data['first_name'], 
+                'last_name': form.cleaned_data['last_name'], 
+                'email': form.cleaned_data['email_address'], 
+                'subject': form.cleaned_data['subject'],
+                'message': form.cleaned_data['message'], 
+            }
+            message = "\n".join(body.values())
+
+            # Defining table values
+            form_first_name = form.cleaned_data['first_name']
+            form_last_name = form.cleaned_data['last_name']
+            form_email = form.cleaned_data['email_address']
+            form_message = form.cleaned_data['message']
+            form_subject = form.cleaned_data['subject']
+
 
             try:
-                send_mail(subject, "", EMAIL_HOST_USER, ["thisisnotaturtle@gmail.com"], html_message=html_message)
+                send_mail(subject, message, EMAIL_HOST_USER, ["thisisnotaturtle@gmail.com"], html_message=message)
+                
+                with connection.cursor() as cursor:
+                    # Insert data into the database table
+                    sql_insert = "INSERT INTO dbo.ContactSubmissions (name, email, subject, message, date) VALUES (%s, %s, %s, %s, GETDATE())"
+                    cursor.execute(sql_insert, (f"{form_first_name} {form_last_name}", form_email, form_subject, form_message))
+                
             except BadHeaderError:
                 return HttpResponse("Invalid header found.")
-            return redirect("/")
+            return redirect("/success/")  # Redirect to the success page upon successful submission
 
     form = ContactForm()
     return render(request, "website/contact.html", {"form": form})
-      
-def success(request):
-    return render(request, "sendemail/success.html")
