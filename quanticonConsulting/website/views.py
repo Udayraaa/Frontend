@@ -51,7 +51,7 @@ def contact(request):
             body = {
                 'first_name': form.cleaned_data['first_name'], 
                 'last_name': form.cleaned_data['last_name'], 
-                'email': form.cleaned_data['email_address'], 
+                'email_address': form.cleaned_data['email_address'], 
                 'subject': form.cleaned_data['subject'],
                 'message': form.cleaned_data['message'], 
             }
@@ -66,7 +66,7 @@ def contact(request):
 
 
             try:
-                send_mail(subject, message, EMAIL_HOST_USER, ["thisisnotaturtle@gmail.com"], html_message=message)
+                send_mail(subject, message, EMAIL_HOST_USER, form_email, html_message=message)
                 
                 with connection.cursor() as cursor:
                     # Insert data into the database table
