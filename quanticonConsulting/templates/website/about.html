@@ -1,19 +1,18 @@
-{% extends "base.html" %}
+{% extends "../base.html" %}
 {% block title %} About {% endblock %}
 {% block content %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        
+.performance-chart-container {
+    margin-bottom: 15%; /* Adjust as needed */
+}
+
+@media(max-width: 991.5px) {
+    .performance-chart-container {
+        margin-bottom: 65%; /* Adjust as needed */
+    }
+}
+    
 .card{
     border:none;
 
@@ -275,14 +274,8 @@ border-bottom: 1px solid #999; */
   position: relative;
   animation: item-height 1s ease forwards
 }
-.collapse {
-    background-color: black;
-    color: white;
-}
 
-.nav-link {
-  color: white;
-}
+
 @keyframes item-height { from { height: 0 } }
 
 .simple-bar-chart > .item > * { position: absolute; text-align: center }
@@ -308,7 +301,7 @@ border-bottom: 1px solid #999; */
                         <h5 class="mt-2 mb-0">Stephen J Cotten, Ph.D.</h5>
                         <span>CEO/Financial Advisor</span>
                         <div class="px-4 mt-1">
-                            <p class="fonts">Founder of Quantico Consulting.</p>
+                            <p class="fonts">Founder of Quanticon Consulting.</p>
                         </div>
                         <ul class="list-inline social-list">
                             <li class="list-inline-item"><i class="fa fa-facebook"></i></li>
@@ -428,7 +421,7 @@ border-bottom: 1px solid #999; */
         </div>
     </div>
     <h3 class="id2" style="margin-top: 40px;"> Performance Chart</h3>
-    <div class="container mt-5">
+    <div class="container mt-5 performance-chart-container">
         
             <div class="simple-bar-chart">
   
