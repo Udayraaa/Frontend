@@ -51,7 +51,7 @@ def contact(request):
             body = {
                 'first_name': form.cleaned_data['first_name'], 
                 'last_name': form.cleaned_data['last_name'], 
-                'email_address': form.cleaned_data['email_address'], 
+                'email_address': form.cleaned_data['email_from'], 
                 'subject': form.cleaned_data['subject'],
                 'message': form.cleaned_data['message'], 
             }
@@ -60,13 +60,13 @@ def contact(request):
             # Defining table values
             form_first_name = form.cleaned_data['first_name']
             form_last_name = form.cleaned_data['last_name']
-            form_email = form.cleaned_data['email_address']
+            form_email = form.cleaned_data['email_from']
             form_message = form.cleaned_data['message']
             form_subject = form.cleaned_data['subject']
 
 
             try:
-                send_mail(subject, message, EMAIL_HOST_USER, form_email, html_message=message)
+                send_mail(form_subject, message, EMAIL_HOST_USER, [form_email], html_message=message.replace("\n", "<br>"))
                 
                 with connection.cursor() as cursor:
                     # Insert data into the database table
@@ -75,7 +75,7 @@ def contact(request):
                 
             except BadHeaderError:
                 return HttpResponse("Invalid header found.")
-            return redirect("/success/")  # Redirect to the success page upon successful submission
+            return redirect("/")  # Redirect to the success page upon successful submission
 
     form = ContactForm()
     return render(request, "website/contact.html", {"form": form})
