@@ -71,7 +71,7 @@ def contact(request):
                 with connection.cursor() as cursor:
                     # Insert data into the database table
                     sql_insert = "INSERT INTO dbo.ContactSubmissions (name, email, subject, message, date) VALUES (%s, %s, %s, %s, GETDATE())"
-                    cursor.execute(sql_insert, (f"{form_first_name} {form_last_name}", form_email, form_subject, form_message))
+                    cursor.execute(sql_insert, (f"{form_first_name} {form_last_name}", form_email, form_subject, form_message,))
                 
             except BadHeaderError:
                 return HttpResponse("Invalid header found.")
